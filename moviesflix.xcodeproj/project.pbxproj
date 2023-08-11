@@ -16,6 +16,10 @@
 		AF2648872A845D5200493639 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2648852A845D5200493639 /* LaunchScreen.storyboard */; };
 		AF2648932A8460AF00493639 /* ReleasedMoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2648922A8460AF00493639 /* ReleasedMoviesTableViewController.swift */; };
 		AF2648962A8460CE00493639 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2648952A8460CE00493639 /* MovieTableViewCell.swift */; };
+		AF34147B2A86A0B700388FB6 /* FindMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34147A2A86A0B700388FB6 /* FindMovieViewController.swift */; };
+		AF34147E2A86A1A000388FB6 /* MovieSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34147D2A86A1A000388FB6 /* MovieSearchResultViewController.swift */; };
+		AF3414812A86A3E200388FB6 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = AF3414802A86A3E200388FB6 /* .env */; };
+		AFB0314F2A86B78800F5A0AA /* models in Resources */ = {isa = PBXBuildFile; fileRef = AFB0314E2A86B78800F5A0AA /* models */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		AF2648882A845D5200493639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF2648922A8460AF00493639 /* ReleasedMoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasedMoviesTableViewController.swift; sourceTree = "<group>"; };
 		AF2648952A8460CE00493639 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		AF34147A2A86A0B700388FB6 /* FindMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieViewController.swift; sourceTree = "<group>"; };
+		AF34147D2A86A1A000388FB6 /* MovieSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchResultViewController.swift; sourceTree = "<group>"; };
+		AF3414802A86A3E200388FB6 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		AFB0314E2A86B78800F5A0AA /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 		AF2648762A845D5100493639 /* moviesflix */ = {
 			isa = PBXGroup;
 			children = (
+				AFB0314E2A86B78800F5A0AA /* models */,
 				AF2648772A845D5100493639 /* AppDelegate.swift */,
 				AF2648792A845D5100493639 /* SceneDelegate.swift */,
 				AF26487B2A845D5100493639 /* ViewController.swift */,
@@ -72,6 +81,9 @@
 				AF2648802A845D5100493639 /* moviesflix.xcdatamodeld */,
 				AF2648922A8460AF00493639 /* ReleasedMoviesTableViewController.swift */,
 				AF2648952A8460CE00493639 /* MovieTableViewCell.swift */,
+				AF34147A2A86A0B700388FB6 /* FindMovieViewController.swift */,
+				AF34147D2A86A1A000388FB6 /* MovieSearchResultViewController.swift */,
+				AF3414802A86A3E200388FB6 /* .env */,
 			);
 			path = moviesflix;
 			sourceTree = "<group>";
@@ -133,9 +145,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB0314F2A86B78800F5A0AA /* models in Resources */,
 				AF2648872A845D5200493639 /* LaunchScreen.storyboard in Resources */,
 				AF2648842A845D5200493639 /* Assets.xcassets in Resources */,
 				AF26487F2A845D5100493639 /* Main.storyboard in Resources */,
+				AF3414812A86A3E200388FB6 /* .env in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +161,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF26487C2A845D5100493639 /* ViewController.swift in Sources */,
+				AF34147B2A86A0B700388FB6 /* FindMovieViewController.swift in Sources */,
 				AF2648822A845D5100493639 /* moviesflix.xcdatamodeld in Sources */,
 				AF2648962A8460CE00493639 /* MovieTableViewCell.swift in Sources */,
+				AF34147E2A86A1A000388FB6 /* MovieSearchResultViewController.swift in Sources */,
 				AF2648782A845D5100493639 /* AppDelegate.swift in Sources */,
 				AF26487A2A845D5100493639 /* SceneDelegate.swift in Sources */,
 				AF2648932A8460AF00493639 /* ReleasedMoviesTableViewController.swift in Sources */,
