@@ -2,7 +2,7 @@
 //  ReleasedMoviesTableViewController.swift
 //  moviesflix
 //
-//  Created by dhruvin on 2023-08-09.
+//  Created by Gursewak on 2023-08-09.
 //
 
 import UIKit

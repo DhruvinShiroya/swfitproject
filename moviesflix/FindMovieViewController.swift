@@ -2,7 +2,7 @@
 //  FindMovieViewController.swift
 //  moviesflix
 //
-//  Created by dhruvin on 2023-08-11.
+//  Created by dhruvin on 2023-08-09.
 //
 
 import UIKit
@@ -13,7 +13,8 @@ class FindMovieViewController: UIViewController {
    
     @IBOutlet weak var errLabel: UILabel!
     
-    
+    var username = ""
+    var result : [Result]? = []	
     @IBAction func findMovies(_ sender: Any) {
         errLabel.text = ""
         
@@ -54,21 +55,26 @@ class FindMovieViewController: UIViewController {
             
             // make request and handle the result
             let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-                if (error != nil) {
-                    print(error as Any)
-                } else {
-                    let httpResponse = response as? HTTPURLResponse
-                    do {
-                        let dict = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String : Any ]
-                        print(dict)
-                    } catch {
-                        print("there were no movies")
-                    }
+                if (error == nil && data != nil) {
+                    let decoder = JSONDecoder()
+                   do {
+                    // Parse JSON
+                    let searchResult = try decoder.decode(SearchResult.self, from : data!)
+                    
+                    self.result = searchResult.results
+                    
+                    
+                   }catch {
+                    print("there were no movies")
+                   }
+                
+                }else {
+                    print("there was no results")
                 }
             })
-
-            dataTask.resume()
             
+            dataTask.resume()
+            self.performSegue(withIdentifier: "showResult", sender: self)
             
         }else {
             errLabel.text = "Please provide valid input"
@@ -83,7 +89,14 @@ class FindMovieViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showResult" {
+            if let movieResultTableViewController = segue.destination as? MovieResultTableViewController{
+                movieResultTableViewController.username = username
+                movieResultTableViewController.result = result!
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation
